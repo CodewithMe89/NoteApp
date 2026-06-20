@@ -1,0 +1,471 @@
+/* ================================
+   NOTES APP — App.css
+   Clean, natural, professional
+   ================================ */
+
+/* ---------- Google Font Import ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --font: 'Inter', system-ui, sans-serif;
+
+  /* Light mode */
+  --bg-page:        #F6F5F0;
+  --bg-surface:     #FFFFFF;
+  --bg-surface-alt: #F0EFE9;
+  --bg-hover:       #EEEDE8;
+
+  --text-primary:   #1C1C1A;
+  --text-secondary: #6B6A65;
+  --text-muted:     #A09F9A;
+
+  --border:         rgba(0, 0, 0, 0.09);
+  --border-focus:   #6C63FF;
+
+  --accent:         #6C63FF;
+  --accent-light:   #EEEDFE;
+  --accent-text:    #3C3489;
+
+  --danger:         #E24B4A;
+  --danger-light:   #FCEBEB;
+  --danger-text:    #791F1F;
+
+  --success:        #3B6D11;
+
+  --radius-sm:      6px;
+  --radius-md:      10px;
+  --radius-lg:      14px;
+
+  --shadow-card:    0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.05);
+  --transition:     all 0.18s ease;
+}
+
+/* ---------- Dark Mode Variables ---------- */
+body.dark {
+  --bg-page:        #1A1A18;
+  --bg-surface:     #252523;
+  --bg-surface-alt: #2E2E2B;
+  --bg-hover:       #333330;
+
+  --text-primary:   #F0EFE9;
+  --text-secondary: #9E9D98;
+  --text-muted:     #5F5E5A;
+
+  --border:         rgba(255, 255, 255, 0.09);
+  --border-focus:   #AFA9EC;
+
+  --accent:         #AFA9EC;
+  --accent-light:   #2E2B4A;
+  --accent-text:    #CECBF6;
+
+  --danger:         #F09595;
+  --danger-light:   #3A2020;
+  --danger-text:    #F7C1C1;
+
+  --success:        #97C459;
+
+  --shadow-card:    0 1px 4px rgba(0,0,0,0.3);
+}
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 24px;
+  height: 56px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+nav a.active {
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
+/* Separator between nav links */
+nav span {
+  color: var(--text-muted);
+  font-size: 14px;
+  user-select: none;
+}
+
+/* Dark mode toggle — pushed to right */
+nav button {
+  margin-left: auto;
+  background: var(--bg-surface-alt);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font);
+}
+
+nav button:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-color: rgba(0,0,0,0.15);
+}
+
+body.dark nav button:hover {
+  border-color: rgba(255,255,255,0.15);
+}
+
+/* ---------- Page Layout ---------- */
+main, .page-wrapper,
+.page-wrapper > * {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ---------- Home Page ---------- */
+.home-heading,
+h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.4px;
+  margin-bottom: 4px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 28px 0 12px;
+}
+
+/* Stat chip on home */
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-light);
+  color: var(--accent-text);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+}
+
+/* Recent notes list on Home */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+ul li {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ul li:hover {
+  border-color: rgba(0,0,0,0.14);
+  transform: translateY(-1px);
+}
+
+body.dark ul li:hover {
+  border-color: rgba(255,255,255,0.14);
+}
+
+/* Empty state */
+p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Go To Notes link */
+a[href="/notes"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 28px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 9px 20px;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+a[href="/notes"]:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+body.dark a[href="/notes"] {
+  background: var(--accent);
+  color: #1A1A18;
+}
+
+/* ---------- Notes Page Header ---------- */
+.notes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+/* ---------- Search Bar ---------- */
+input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: var(--font);
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow-card);
+}
+
+input[type="text"]::placeholder {
+  color: var(--text-muted);
+}
+
+input[type="text"]:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+/* ---------- Add Note Row ---------- */
+.add-note-row {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0 28px;
+}
+
+.add-note-row input[type="text"] {
+  flex: 1;
+  margin: 0;
+}
+
+/* ---------- Buttons (shared base) ---------- */
+button {
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+/* Primary button — Add Note */
+button.btn-primary,
+button:first-of-type:not(.btn-secondary):not(.btn-danger):not(.btn-ghost) {
+  background: var(--accent);
+  color: #fff;
+  border-color: transparent;
+}
+
+button.btn-primary:hover {
+  opacity: 0.88;
+}
+
+body.dark button.btn-primary {
+  color: #1A1A18;
+}
+
+/* ---------- Note Card ---------- */
+.note-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+}
+
+.note-card:hover {
+  border-color: rgba(0,0,0,0.13);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+body.dark .note-card:hover {
+  border-color: rgba(255,255,255,0.13);
+}
+
+/* Note text */
+.note-card h3,
+.note-card > div > h3 {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-transform: none;
+  letter-spacing: normal;
+  margin: 0 0 12px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+/* Note card action row */
+.note-card > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-card-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+/* Edit button */
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: var(--border);
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.btn-ghost:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* Delete button */
+.btn-danger {
+  background: var(--danger-light);
+  color: var(--danger-text);
+  border-color: transparent;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.btn-danger:hover {
+  opacity: 0.82;
+}
+
+/* Save button */
+.btn-success {
+  background: transparent;
+  color: var(--success);
+  border: 1px solid var(--success);
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.btn-success:hover {
+  background: color-mix(in srgb, var(--success) 10%, transparent);
+}
+
+/* ---------- Edit Mode inside NoteItem ---------- */
+.edit-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.edit-row input[type="text"] {
+  flex: 1;
+  margin: 0;
+}
+
+/* ---------- Empty state ---------- */
+.empty-state {
+  text-align: center;
+  padding: 56px 0;
+  color: var(--text-muted);
+}
+
+.empty-state p {
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+/* ---------- Notes list ---------- */
+.notes-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Search container ---------- */
+.search-container {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 500px) {
+  nav {
+    padding: 0 14px;
+  }
+
+  nav a {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  main, .page-wrapper, .page-wrapper > * {
+    padding: 24px 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
