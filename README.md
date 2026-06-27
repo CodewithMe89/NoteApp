@@ -116,3 +116,11 @@ Developed by Keshav
 ## 📄 License
 
 This project is open-source and available under the MIT License.
+
+## 🌐 Live Demo
+
+https://notes-app-radhe.vercel.app
+
+## 📂 Repository
+
+[https://github.com/radhe123/notes-app](https://github.com/CodewithMe89/NoteApp)
