@@ -17,12 +17,23 @@ A modern Notes Management Application built with React. Users can create, edit, 
 
 ## 📸 Screenshots
 
-Add screenshots of:
+## 📸 Screenshots
 
-* Dashboard Page
-* Notes Page
-* Dark Mode
-* Search Functionality
+### Dashboard
+
+![Dashboard](./Screenshots/LightModeDashboard.png)
+
+### Notes Page
+
+![Notes Page](./Screenshots/NotesPage.png)
+
+### Dark Mode
+
+![Dark Mode](./Screenshots/DarkModeDashboard.png)
+
+### Search Feature
+
+![Search](./Screenshots/SearchFeature.png)
 
 ## 🛠️ Tech Stack
 
