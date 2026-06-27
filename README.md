@@ -100,7 +100,7 @@ npm run dev
 
 ## 👨‍💻 Author
 
-Developed by Radhe
+Developed by Keshav
 
 ## 📄 License
 
