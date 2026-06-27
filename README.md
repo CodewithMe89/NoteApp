@@ -1,16 +1,107 @@
-# React + Vite
+# 📝 Notes App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Notes Management Application built with React. Users can create, edit, delete, search, and manage notes with persistent storage and dark mode support.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* ✅ Create Notes
+* ✅ Edit Existing Notes
+* ✅ Delete Notes
+* ✅ Search Notes Instantly
+* ✅ Dark Mode / Light Mode
+* ✅ Dashboard with Notes Summary
+* ✅ Recent Notes Section
+* ✅ Data Persistence using Local Storage
+* ✅ Client-Side Routing with React Router
+* ✅ Global State Management using Context API
 
-## React Compiler
+## 📸 Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Add screenshots of:
 
-## Expanding the ESLint configuration
+* Dashboard Page
+* Notes Page
+* Dark Mode
+* Search Functionality
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+* React
+* React Router DOM
+* Context API
+* JavaScript (ES6+)
+* CSS3
+* Local Storage
+
+## 📂 Project Structure
+
+src/
+├── Components/
+│ ├── AddNote.jsx
+│ ├── NoteItem.jsx
+│ └── NotesList.jsx
+│
+├── Context/
+│ └── NotesContext.jsx
+│
+├── Pages/
+│ ├── Home.jsx
+│ └── Notes.jsx
+│
+├── App.jsx
+└── main.jsx
+
+## 🎯 Key Concepts Implemented
+
+* React Hooks (`useState`, `useEffect`, `useContext`)
+* Context API
+* CRUD Operations
+* React Router Navigation
+* Local Storage Integration
+* Controlled Components
+* Conditional Rendering
+* Search Filtering
+* Theme Switching
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/notes-app.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd notes-app
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+## 🌟 Future Improvements
+
+* User Authentication
+* Cloud Database Integration
+* Categories & Tags
+* Note Pinning
+* Rich Text Editor
+* Note Export Feature
+
+## 👨‍💻 Author
+
+Developed by Keshav
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
