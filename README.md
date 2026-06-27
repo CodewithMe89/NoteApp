@@ -119,7 +119,7 @@ This project is open-source and available under the MIT License.
 
 ## 🌐 Live Demo
 
-https://notes-app-radhe.vercel.app
+[https://notes-app-radhe.vercel.app](https://note-app-keshav89.vercel.app/)
 
 ## 📂 Repository
 
